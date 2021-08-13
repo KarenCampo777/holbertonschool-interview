@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-"method that calculates the fewest number"
+"""
+Minimum Operations
+"""
+
 
 def minOperations(n):
+    """
+    Method that calculates
+    the fewest number of operations
+    """
 
-    if (n <= 1):
+    if n <= 1:
         return 0
+    num, div, operations = n, 2, 0
 
-    Hs = 1
-    counter = 0
-    copy_paste = 0
-
-    while (Hs < n):
-        if (n % Hs == 0):
-            counter += 2
-            copypaste = Hs
+    while num > 1:
+        if num % div == 0:
+            num = num / div
+            operations = operations + div
         else:
-            counter += 1
-
-        Hs = copy_paste + Hs
-
-    return counter
+            div += 1
+    return operations
