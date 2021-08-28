@@ -11,17 +11,14 @@ int is_palindrome(listint_t **head)
 {
 	int longi = sizeof(head);
 	int init = 0;
-	int ending = longi - 1;
-
-	if (longi <= 1)
-		return (1);
+	int ending = longi;
 
 while (head[init] == head[ending])
 {
-	if (init >= ending)
+	if (longi == 1)
 		return (1);
 	init++;
 	ending--;
 }
-return (0);
+return (1);
 }
