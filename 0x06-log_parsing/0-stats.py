@@ -7,7 +7,7 @@ def file_metrics(status_codes, file_size):
     print("File size: {}".format(file_size))
     for key, value in sorted(status_codes.items()):
         if value > 0:
-            print("{}: {}".format(k, v))
+            print("{}: {}".format(key, value))
 
 
 random_codes = {'200': 0, '301': 0, '400': 0, '401': 0,
