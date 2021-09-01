@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Script that reads stdin"""
-from sys import stdin
+import sys
 
 
 def file_metrics(status_codes, file_size):
@@ -10,11 +10,12 @@ def file_metrics(status_codes, file_size):
             print("{}: {}".format(k, v))
 
 
-random_codes = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0,'404': 0,'405': 0, '500': 0}
+random_codes = {'200': 0, '301': 0, '400': 0, '401': 0,
+                '403': 0, '404': 0, '405': 0, '500': 0}
 counter = 1
 codes_size = 0
 try:
-    for line in stdin:
+    for line in sys.stdin:
         split_line = line.strip().split()
         if len(split_line) < 7:
             continue
