@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "lists.h"
 /**
  * check_cycle - A singly linked list has a cycle in it.
